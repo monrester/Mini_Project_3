@@ -8,7 +8,7 @@ import sys
 from matplotlib import rc
 
 rc('font',**{'family':'sans-serif','sans-serif':['Computer Modern']})
-rc('text', usetex = True)
+rc('text', usetex = False)
 
 class GeneralNetwork:
     ''' A GeneralNetwork object contains information about network architecture.
@@ -141,7 +141,7 @@ class GeneralNetwork:
 
         return
 
-    def train(self, Data, eta : float = 1, epochs : int = 10000, replacement : bool = 0):
+    def train(self, Data, eta : float = 1, epochs : int = 2500, replacement : bool = 0):
         '''
         Inputs:   Data        (object) : this object contains information
                                          about the training data. The object

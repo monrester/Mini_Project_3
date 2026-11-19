@@ -6,7 +6,7 @@ import matplotlib.pylab as plt
 
 seed(1)
 
-Network = N.GeneralNetwork(3, [2, 3, 2], verbose = 1, vis = False, \
+Network = N.GeneralNetwork(3, [2, 3, 2], verbose = 0, vis = False, \
                          activation_function = "sigmoid")
 # define network architecture using GeneralNetwork object
 Data_obj    = N.Data(10, highamdata = True)
@@ -17,7 +17,7 @@ cost1   = Network.train(Data_obj)
 av_cost1 = [mean(cost1[i, :]) for i in arange(cost1.shape[0])]
 # train the network with the data
 
-Network = N.GeneralNetwork(3, [2, 20, 2], verbose = 1, vis = True, \
+Network = N.GeneralNetwork(3, [2, 20, 2], verbose = 0, vis = True, \
                          activation_function = "sigmoid")
 # define network architecture using GeneralNetwork object
 Data    = N.Data(10, highamdata = True)
